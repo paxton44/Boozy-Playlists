@@ -1,2 +1,0 @@
-# teamAwesome
-teamAwesome Group Project 
