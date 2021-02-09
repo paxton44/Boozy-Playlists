@@ -26,10 +26,9 @@
 //then grabs what you want based on how far into the database you went(genre, playlist, album, song)
 //then it returns the selected music in JSON for your app
 //then it returns to the app how the user expects to see the playlist or song 
-$(document).ready(function(){
 //
 //js link test 
-console.log("hello");
+// console.log("hello");
 //box is the container with all of the drink selections 
 //make vars for each drink
 //
@@ -37,21 +36,21 @@ console.log("hello");
 // // var result = e.options[e.selectedIndex]
 // console.log(e)
 
-
-$('#drink-dropdown').change(function(e){
+$(document).ready(function(){
+  $('#drink-dropdown').change(function(e){
     var e = $("#drink-dropdown").val();
     // var result = e.options[e.selectedIndex]
     console.log(e)
     })
-
+  // mojito API
     fetch('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11000')
   .then(function (e) {
     return e.json();
   })
-})
-.then(function (data) {
+  .then(function (data) {
   console.log(data);
-});
+  });
+
   // .then(function (data) {
   //   //looping over the fetch response and inserting the URL of your repos into a list
   //   for (var i = 0; i < data.length; i++) {
@@ -59,24 +58,24 @@ $('#drink-dropdown').change(function(e){
     // trigger the next drink in the api (.change)
     // JSON parse
 
-
-var mojito 
-// https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11000 
-//
-var screwDriver
-//
-var margarita
-//
-var dirtyMartini
-//
-var moscowMule
-var whiskeySour
-var pinaColada 
-var ginTonic
-var manhattan
-var oldFashioned
-var longIsland
-var cosmopolitan 
+})
+// var mojito 
+// // https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11000 
+// //
+// var screwDriver
+// //
+// var margarita
+// //
+// var dirtyMartini
+// //
+// var moscowMule
+// var whiskeySour
+// var pinaColada 
+// var ginTonic
+// var manhattan
+// var oldFashioned
+// var longIsland
+// var cosmopolitan 
 //make dropdown menu act as on click event based on drink selection that also populates the picture div and populates the drink recipe div from the drink api.  
 //dropdown selection -> display drink image -> display drink recipe from drink API -> grabs playlist from spotify api based on assigned drink selection -> displays functioning spotify playlist in div -> 
 // dropdown selection ->
@@ -92,9 +91,3 @@ var cosmopolitan
 
 
 
-//return function 
-// return {
-//     getPlaylist(token,genreID)}
-//     {
-// retrun playlist (token,genreID)
-//     }
