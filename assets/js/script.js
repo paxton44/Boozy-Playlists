@@ -1,21 +1,21 @@
 //Pseudo Code 
 
-//make function that grabs the API 
-Var=APIGrabber = function (){}
+// //make function that grabs the API 
+// Var=APIGrabber = function (){}
 
-//API pseudo code rough: Spotify uses genres to access all media inside its database. 
+// //API pseudo code rough: Spotify uses genres to access all media inside its database. 
 
-//get the playlists
-//get the playlist items 
-//get the songs from the playlist individually ****figure out if we need to go further into folders or if playlist is enough
+// //get the playlists
+// //get the playlist items 
+// //get the songs from the playlist individually ****figure out if we need to go further into folders or if playlist is enough
 
-//Pseudo code code structure 
-//make a var that grabs from spotify 
-Var APIFunction =(function()) {
-var userID =  ""
-var userSecret = ""
-}
-//
+// //Pseudo code code structure 
+// //make a var that grabs from spotify 
+// Var APIFunction =(function()) {
+// var userID =  ""
+// var userSecret = ""
+// }
+// //
 
 //it uses a token parameter from spotify 
 // 
@@ -44,11 +44,18 @@ $('#drink-dropdown').change(function(e){
     console.log(e)
     })
 
-//     fetch('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11000')
-//   .then(function (e) {
-//     return e.json();
+    fetch('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11000')
+  .then(function (e) {
+    return e.json();
   })
-
+})
+.then(function (data) {
+  console.log(data);
+});
+  // .then(function (data) {
+  //   //looping over the fetch response and inserting the URL of your repos into a list
+  //   for (var i = 0; i < data.length; i++) {
+  //     var drinkData= document.createElement('#recipe');
     // trigger the next drink in the api (.change)
     // JSON parse
 
