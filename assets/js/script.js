@@ -49,6 +49,7 @@ $(document).ready(function(){
   })
   .then(function (data) {
   console.log(data);
+<<<<<<< HEAD
     drinkData(data);
   });
 
@@ -106,6 +107,10 @@ function drinkData(data){
 
 
 
+=======
+  });
+
+>>>>>>> origin/main
   // .then(function (data) {
   //   //looping over the fetch response and inserting the URL of your repos into a list
   //   for (var i = 0; i < data.length; i++) {

@@ -1,12 +1,14 @@
 body {
-    background-color: black;
+    background-color:#f2f3f1;
 }
 
 
 
-
 #search-drink {
-    background-color:#f2f3f1; 
+    height: 254px;
+    width: 400px;
+    background-image: url(../images/black-white-tape.jpg);
+    background-color:#f2f3f1;
     border-radius: 0.35rem;
     margin-bottom: 10px;
     border: 1px solid;
@@ -16,7 +18,7 @@ body {
 
 #playlist {
     border-radius: 0.35rem;
-    background-color:#f2f3f1;
+    background-color:#F6F8E1;
     border: 1px solid;
     padding: 10px;
     box-shadow: 5px 10px 18px #888888;
@@ -28,7 +30,7 @@ body {
     padding-top: 180px;
     box-shadow: 5px 10px 18px #888888;
     margin-top: -10rem;
-    background-color:#f2f3f1;
+    background-color:#F6F8E1;
     box-shadow: 5px 10px 18px #888888;
     position: absolute;
     
@@ -37,7 +39,7 @@ body {
 }
 
 #drink-image {
-    background-color:#f2f3f1;
+    background-color:#F6F8E1;
     width: 85%;
     border-radius: 0.35rem;
     box-shadow: 5px 10px 18px #888888;
@@ -51,4 +53,9 @@ body {
     
 
 
+}
+#drink-dropdown {
+    margin-left: 123px;
+    margin-top: 145px;
+    
 }
