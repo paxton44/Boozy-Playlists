@@ -49,6 +49,7 @@ $(document).ready(function(){
   })
   .then(function (data) {
   console.log(data);
+
     drinkData(data);
   });
 
@@ -106,6 +107,10 @@ function drinkData(data){
 
 
 
+
+  });
+
+
   // .then(function (data) {
   //   //looping over the fetch response and inserting the URL of your repos into a list
   //   for (var i = 0; i < data.length; i++) {
@@ -113,7 +118,7 @@ function drinkData(data){
     // trigger the next drink in the api (.change)
     // JSON parse
 
-})
+
 // var mojito 
 // // https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11000 
 // //
