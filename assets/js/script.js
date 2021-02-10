@@ -1,3 +1,13 @@
+// Pexels Api key
+
+// import { createClient } from 'pexels';
+
+// const client = createClient('563492ad6f917000010000013e47a29a529b44bda742616d10c0dc51');
+// console.log(client)
+
+
+
+
 //Pseudo Code 
 
 // //make function that grabs the API 
@@ -63,13 +73,31 @@ function drinkData(data){
   
   for ( var i = 0; i < 15; i++){
     // ingredients with drink measurements
-    console.log(drink[`strIngredient${i}`] + ": " + drink[`strMeasure${i}`])
+    // 
+
+    const drinkIngredients = document.createElement("ul");
+    drinkDiv.appendChild(drinkIngredients);
+
+    const value = drink[`strIngredient${i}`] + ": " + drink[`strMeasure${i}`]
+    
+    
+    // console.log(drink[`strIngredient${i}`] + ": " + drink[`strMeasure${i}`])
+    // add drink name 
+    listItem = document.createElement("li");
+    listItem.innerHTML = value;
+    
+    drinkIngredients.appendChild(listItem);
+    
+      /// null values need to go away 
+    // if (value != null ) {
+      
+    // }
   }
 
   // if ingredient is null, dont show
-  const heading = document.createElement('h1');
-  heading.innerHTML = drinkName;
-  drinkDiv.appendChild(heading);
+  // const heading = document.createElement('h1');
+  // heading.innerHTML = drinkName;
+  // drinkDiv.appendChild(heading);
 
   const drinkIngredients = document.createElement("ul");
   drinkDiv.appendChild(drinkIngredients);
@@ -87,12 +115,14 @@ function drinkData(data){
       
     }, {});
 
-    for (let key in getIngredients) {
-      let value = getIngredients[key];
-      listItem = document.createElement("li");
-      listItem.innerHTML = value;
-      drinkIngredients.appendChild(listItem);
-    }
+    // for (let key in getIngredients) {
+    //   let value = getIngredients[key];
+    //   listItem = document.createElement("li");
+    //   listItem.innerHTML = value;
+    //   drinkIngredients.appendChild(listItem);
+
+
+    // }
     // instructions 
   const drinkInstructions = document.createElement('p');
   
