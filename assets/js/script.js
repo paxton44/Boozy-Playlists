@@ -50,31 +50,48 @@
 // // var result = e.options[e.selectedIndex]
 // console.log(e)
 
-var drinkVal = $("#drink-dropdown").val();
-var myLink = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkVal}`
+// var drinkVal = $("#drink-dropdown").val();
+// var myLink = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkVal}`
 $(document).ready(function(){
+  var drinkVal;
+
  
- 
-  $('#drink-dropdown').change(function(drinkVal){
+  $('#drink-dropdown').on("change",function(e){
+
     // drinkVal.stopImmediatePropagation();
     // return false;
-   
+     drinkVal = $("#drink-dropdown").val();
+
+     var myLink = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkVal}`
     // var e = $("#drink-dropdown").val();
     // var result = e.options[e.selectedIndex]
    
-    drinkVal.preventDefault();
+    e.preventDefault();
     console.log(drinkVal)
+      // mojito API
+      fetch(myLink)
+      .then(function (drinkVal) {
+        return drinkVal.json();
+      })
+      .then(function (data) {
+      console.log(data);
+  drinkData(data)        
+        
+        
+      })
+      ;
+    
     })
-  // mojito API
-    fetch(myLink)
-  .then(function (drinkVal) {
-    return drinkVal.json();
-  })
-  .then(function (data) {
-  console.log(data);
+  // // mojito API
+  //   fetch(myLink)
+  // .then(function (drinkVal) {
+  //   return drinkVal.json();
+  // })
+  // .then(function (data) {
+  // console.log(data);
 
-    drinkData(data);
-  });
+  //   drinkData(data);
+  // });
 
 function drinkData(data){
 
