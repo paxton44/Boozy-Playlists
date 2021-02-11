@@ -70,6 +70,36 @@ $(document).ready(function () {
         drinkData(data);
       });
   });
+
+function drinkData(data){
+
+  let drink = data.drinks[0];
+  const drinkDiv = document.getElementById("drink-content");
+  // strDrink
+  const drinkName = drink.strDrink;
+  console.log(drinkName)
+ 
+  for ( var i = 0; i < 15; i++){
+    // ingredients with drink measurements
+    console.log(drink[`strIngredient${i}`] + ": " + drink[`strMeasure${i}`])
+  }
+
+  // if ingredient is null, dont show
+  const heading = document.createElement('h1');
+  heading.innerHTML = drinkName;
+  drinkDiv.appendChild(heading);
+
+  const drinkIngredients = document.createElement("li");
+  drinkDiv.appendChild(drinkIngredients);
+  const getIngredients = Object.keys(drink)
+    .filter(function (ingredient) {
+      return ingredient.indexOf("strIngredient") == 0;
+     
+    })
+    // add measurements to this
+    .reduce(function (ingredients, ingredient) {
+      if (drink[ingredient] != null) {
+        ingredients[ingredient] = drink[ingredient];
   // // mojito API
   //   fetch(myLink)
   // .then(function (drinkVal) {
