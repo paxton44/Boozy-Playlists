@@ -6,11 +6,7 @@
 // const client = createClient('563492ad6f917000010000013e47a29a529b44bda742616d10c0dc51');
 // console.log(client)
 
-
-
-
-//Pseudo Code 
-
+//Pseudo Code
 
 //Pseudo Code
 
@@ -34,8 +30,6 @@
 //it uses a token parameter from spotify
 //
 
-
-
 //it then fetches the spotify api
 //then grabs what you want based on how far into the database you went(genre, playlist, album, song)
 //then it returns the selected music in JSON for your app
@@ -52,36 +46,30 @@
 
 // var drinkVal = $("#drink-dropdown").val();
 // var myLink = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkVal}`
-$(document).ready(function(){
+$(document).ready(function () {
   var drinkVal;
 
- 
-  $('#drink-dropdown').on("change",function(e){
-
+  $("#drink-dropdown").on("change", function (e) {
     // drinkVal.stopImmediatePropagation();
     // return false;
-     drinkVal = $("#drink-dropdown").val();
+    drinkVal = $("#drink-dropdown").val();
 
-     var myLink = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkVal}`
+    var myLink = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkVal}`;
     // var e = $("#drink-dropdown").val();
     // var result = e.options[e.selectedIndex]
-   
+
     e.preventDefault();
-    console.log(drinkVal)
-      // mojito API
-      fetch(myLink)
+    console.log(drinkVal);
+    // mojito API
+    fetch(myLink)
       .then(function (drinkVal) {
         return drinkVal.json();
       })
       .then(function (data) {
-      console.log(data);
-  drinkData(data)        
-        
-        
-      })
-      ;
-    
-    })
+        console.log(data);
+        drinkData(data);
+      });
+  });
   // // mojito API
   //   fetch(myLink)
   // .then(function (drinkVal) {
@@ -93,66 +81,66 @@ $(document).ready(function(){
   //   drinkData(data);
   // });
 
-function drinkData(data){
+  function drinkData(data) {
+    let drink = data.drinks[0];
+    const drinkDiv = document.getElementById("drink-content");
+    // strDrink
+    const drinkName = drink.strDrink;
+    console.log(drinkName);
 
-  let drink = data.drinks[0];
-  const drinkDiv = document.getElementById("drink-content");
-  // strDrink
-  const drinkName = drink.strDrink;
-  console.log(drinkName)
- 
-  for ( var i = 0; i < 15; i++){
-    // ingredients with drink measurements
-    console.log(drink[`strIngredient${i}`] + ": " + drink[`strMeasure${i}`])
-  }
+    // empty out div 
 
-  // if ingredient is null, dont show
-  const heading = document.createElement('h1');
-  heading.innerHTML = drinkName;
-  drinkDiv.appendChild(heading);
+    const heading = document.createElement("h1");
+    heading.innerHTML = drinkName;
+    drinkDiv.appendChild(heading);
 
-  const drinkIngredients = document.createElement("ul");
-  drinkDiv.appendChild(drinkIngredients);
-  const getIngredients = Object.keys(drink)
-    .filter(function (ingredient) {
-      return ingredient.indexOf("strIngredient") == 0;
-     
-    })
-    // add measurements to this
-    .reduce(function (ingredients, ingredient) {
-      if (drink[ingredient] != null) {
-        ingredients[ingredient] = drink[ingredient];
+    for (var i = 0; i < 15; i++) {
+      // ingredients with drink measurements
+      //
+      const drinkIngredients = document.createElement("ul");
+      drinkDiv.appendChild(drinkIngredients);
+      const value = drink[`strIngredient${i}`] + ": " + drink[`strMeasure${i}`];
+      // console.log(drink[`strIngredient${i}`] + ": " + drink[`strMeasure${i}`])
+      // add drink name
+      if (drink[`strIngredient${i}`] != null) {
+        listItem = document.createElement("li");
+        listItem.innerHTML = value;
+        $("li").attr("id", i + 1);
+        console.log("ahhhh");
+        drinkIngredients.appendChild(listItem);
       }
-      return ingredients;
-     
-    }, {});
 
-    for (let key in getIngredients) {
-      let value = getIngredients[key];
-      listItem = document.createElement("li");
-      listItem.innerHTML = value;
-      drinkIngredients.appendChild(listItem);
+      
     }
-    // instructions
-  const drinkInstructions = document.createElement('p');
- 
-  drinkDiv.appendChild(drinkInstructions);
-  const getInstructions = drink.strInstructions
-
-  drinkInstructions.append(getInstructions);
- 
- 
-
-}
-
-
-
-
-  });
 
   
+    const drinkIngredients = document.createElement("ul");
+    drinkDiv.appendChild(drinkIngredients);
+    const getIngredients = Object.keys(drink)
+      .filter(function (ingredient) {
+        return ingredient.indexOf("strIngredient") == 0;
+      })
+      // add measurements to this
+      .reduce(function (ingredients, ingredient) {
+        if (drink[ingredient] != null) {
+          ingredients[ingredient] = drink[ingredient];
+        }
+        return ingredients;
+      }, {});
 
+    // for (let key in getIngredients) {
+    //   let value = getIngredients[key];
+    //   listItem = document.createElement("li");
+    //   listItem.innerHTML = value;
+    //   drinkIngredients.appendChild(listItem);
+    // }
 
- 
+    // instructions
+    const drinkInstructions = document.createElement('p');
 
+    drinkDiv.appendChild(drinkInstructions);
+    const getInstructions = drink.strInstructions
 
+    drinkInstructions.append(getInstructions);
+  }
+});
