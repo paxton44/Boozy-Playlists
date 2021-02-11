@@ -1,4 +1,15 @@
 //Pseudo Code
+// Pexels Api key
+
+// import { createClient } from 'pexels';
+
+// const client = createClient('563492ad6f917000010000013e47a29a529b44bda742616d10c0dc51');
+// console.log(client)
+
+
+
+
+//Pseudo Code 
 
 // //make function that grabs the API
 // Var=APIGrabber = function (){}
@@ -119,6 +130,85 @@ function drinkData(data){
 
   });
 
+  
+
+function drinkData(data){
+
+  let drink = data.drinks[0];
+  const drinkDiv = document.getElementById("drink-content");
+  // strDrink
+  const drinkName = drink.strDrink;
+  console.log(drinkName)
+  
+  for ( var i = 0; i < 15; i++){
+    // ingredients with drink measurements
+    // 
+
+    const drinkIngredients = document.createElement("ul");
+    drinkDiv.appendChild(drinkIngredients);
+
+    const value = drink[`strIngredient${i}`] + ": " + drink[`strMeasure${i}`]
+    
+    
+    // console.log(drink[`strIngredient${i}`] + ": " + drink[`strMeasure${i}`])
+    // add drink name 
+    listItem = document.createElement("li");
+    listItem.innerHTML = value;
+    
+    drinkIngredients.appendChild(listItem);
+    
+      /// null values need to go away 
+    // if (value != null ) {
+      
+    // }
+  }
+
+  // if ingredient is null, dont show
+  // const heading = document.createElement('h1');
+  // heading.innerHTML = drinkName;
+  // drinkDiv.appendChild(heading);
+
+  const drinkIngredients = document.createElement("ul");
+  drinkDiv.appendChild(drinkIngredients);
+  const getIngredients = Object.keys(drink)
+    .filter(function (ingredient) {
+      return ingredient.indexOf("strIngredient") == 0;
+      
+    })
+    // add measurements to this 
+    .reduce(function (ingredients, ingredient) {
+      if (drink[ingredient] != null) {
+        ingredients[ingredient] = drink[ingredient];
+      }
+      return ingredients;
+      
+    }, {});
+
+    // for (let key in getIngredients) {
+    //   let value = getIngredients[key];
+    //   listItem = document.createElement("li");
+    //   listItem.innerHTML = value;
+    //   drinkIngredients.appendChild(listItem);
+
+
+    // }
+    // instructions 
+  const drinkInstructions = document.createElement('p');
+  
+  drinkDiv.appendChild(drinkInstructions);
+  const getInstructions = drink.strInstructions
+
+  drinkInstructions.append(getInstructions);
+  
+  
+
+}
+
+
+
+
+
+
 
   // .then(function (data) {
   //   //looping over the fetch response and inserting the URL of your repos into a list
@@ -128,8 +218,8 @@ function drinkData(data){
     // JSON parse
 
 
-// var mojito
-// // https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11000
+// var mojito 
+// // https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11000 
 // //
 // var screwDriver
 // //
