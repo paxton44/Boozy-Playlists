@@ -166,6 +166,3 @@ $(document).ready(function(){
    drinkInstructions.append(getInstructions);
  }
 });
-
-
-
