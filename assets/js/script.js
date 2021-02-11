@@ -94,7 +94,7 @@ function drinkData(data){
   heading.innerHTML = drinkName;
   drinkDiv.appendChild(heading);
 
-  const drinkIngredients = document.createElement("ul");
+  const drinkIngredients = document.createElement("li");
   drinkDiv.appendChild(drinkIngredients);
   const getIngredients = Object.keys(drink)
     .filter(function (ingredient) {
