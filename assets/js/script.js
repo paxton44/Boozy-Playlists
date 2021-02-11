@@ -11,6 +11,9 @@
 
 //Pseudo Code 
 
+
+//Pseudo Code
+
 // //make function that grabs the API
 // Var=APIGrabber = function (){}
 
@@ -194,13 +197,13 @@ function drinkData(data){
     // }
     // instructions 
   const drinkInstructions = document.createElement('p');
-  
+ 
   drinkDiv.appendChild(drinkInstructions);
   const getInstructions = drink.strInstructions
 
   drinkInstructions.append(getInstructions);
-  
-  
+ 
+ 
 
 }
 
@@ -218,8 +221,8 @@ function drinkData(data){
     // JSON parse
 
 
-// var mojito 
-// // https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11000 
+// var mojito
+// // https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11000
 // //
 // var screwDriver
 // //
