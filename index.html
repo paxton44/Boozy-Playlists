@@ -9,75 +9,78 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Boozy Playlists</title>
-    
+
+   
 </head>
 
 <body>
     <section class="hero">
         <div class="hero-body">
-          <p class="title">
-            Boozy playlists 
-          </p>
-          <p class="subtitle">
-            Alcohol might not solve your problems, but listening to music while you drink will!
-          </p>
+            <p class="title has-text-white">
+                Boozy playlists
+            </p>
+            <p class="subtitle has-text-white">
+                Alcohol might not solve your problems, but listening to music while you drink will!
+            </p>
         </div>
-      </section>
-    
-        <div class="container">
-            <div class="columns">
-                <div class="column is-4">
-                    <div class="box" id="search-drink">
+    </section>
+
+    <div class="container">
+        <div class="columns">
+            <div class="column is-4">
+                <div class="box" id="search-drink">
                     <select id="drink-dropdown">
-                    <option value="margarita">Margarita</option>
-                    <option value="mojito">Mojito</option>
-                    <option value="dirty-martini">Dirty Martini</option>
-                    <option value="screw-driver">Screw Driver</option>
-                    <option value="pina-colada">Piña Colada</option>
-                    <option value="whiskey-sour">Whiskey Sour</option>
-                    <option value="manhattan">Manhattan</option>
-                    <option value="moscow-mule">Moscow Mule</option>
-                    <option value="gin-tonic">Gin + Tonic</option>
-                    <option value="old-fashioned">Old Fashioned</option>
-                    <option value="long-island">Long Island Ice Tea</option>
-                    <option value="cosmo">Cosmopolitan</option>
+                    
+                        <option value="17207">Piña Colada</option>
+                        <option value="11000">Mojito</option>
+                        <option value="11007">Margarita</option>
+                        <option value="17181">Dirty Martini</option>
+                        <option value="12162">Screw Driver</option>
+                        <option value="11004">Whiskey Sour</option>
+                        <option value="11008">Manhattan</option>
+                        <option value="11009">Moscow Mule</option>
+                        <option value="11403">Gin + Tonic</option>
+                        <option value="11001">Old Fashioned</option>
+                        <option value="17204">Long Island Ice Tea</option>
+                        <option value="17196">Cosmopolitan</option>
                     </select>
-                      </div>
-                    <div class="card" id="playlist">
-                        <div class="card-content">
-                            <div class="content">
-                                <iframe src="https://open.spotify.com/embed/playlist/0Agoh8cv8FrQnuOXdS1VU8" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                            </div>
-                        </div>
+                </div>
+                <div class="box" id="playlist">
+                    <div class="content" id="display-playlist">
+                        <iframe src="https://open.spotify.com/embed/playlist/0Agoh8cv8FrQnuOXdS1VU8" width="300"
+                            height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                     </div>
 
                 </div>
-
-
-                <div class="column is-8">
-                    <div class="card" id="drink-image">
-                        <div class="card-content">
-                            <div class="content">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, excepturi dolorem natus consectetur tempora deleniti rerum dolor possimus exercitationem aspernatur sunt officia facilis cumque, id velit sed rem neque ipsum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat nulla odio impedit quos omnis sequi nemo et minus! Ab ipsam quae corrupti, aliquam non amet iusto rem possimus consectetur assumenda? Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, excepturi dolorem natus consectetur tempora deleniti rerum dolor possimus exercitationem aspernatur sunt officia facilis cumque, id velit sed rem neque ipsum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat nulla odio impedit quos omnis sequi nemo et minus! Ab ipsam quae corrupti, aliquam non amet iusto rem possimus consectetur assumenda? Lorem ipsum dolor sit amet consectetur adipisicing elit.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, excepturi dolorem natus consectetur tempora deleniti rerum dolor possimus exercitationem aspernatur sunt officia facilis cumque, id velit sed rem neque ipsum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat nulla odio impedit quos omnis sequi nemo et minus! Ab ipsam quae corrupti, aliquam non amet iusto rem possimus consectetur assumenda?
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card" id="recipe">
-                        <div class="card-content">
-                            <div class="content" id="drink-content">
-                                
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-
 
             </div>
 
+
+            <div class="column is-8">
+                <div class="card" id="drink-image">
+                    <div class="card-content">
+                        <div class="content" id="image">
+                           
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card" id="recipe">
+                    <div class="card-content">
+                        <div class="content" id="drink-content">
+
+
+                
+                </div>
+
+            </div>
+
+
+
         </div>
-   
+
+    </div>
+
 
 
 
