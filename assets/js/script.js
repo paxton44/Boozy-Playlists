@@ -191,5 +191,24 @@ document.getElementById('no').onclick = function() {
 
    drinkInstructions.append(getInstructions);
  }
+//  function getPhotos(images) {
+//     images.map(image => {
+//       console.log(image)
+//     })
+//  }
+ fetch("https://api.pexels.com/v1/search?query=people",{
+   headers: {
+     Authorization: "563492ad6f9170000100000134e84897333d4b1f95f23ba765c754d6"
+   }
+ })
+    .then(resp => {
+      
+      return resp.json()
+    })
+    .then(data => {
+      console.log(data.photos)
+    })
+
+
 });
 
