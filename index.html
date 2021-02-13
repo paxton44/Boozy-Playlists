@@ -10,11 +10,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Boozy Playlists</title>
 
-   
+
 </head>
 
 <body>
-    
+
     <section class="hero">
         <div class="hero-body">
             <p class="title has-text-white">
@@ -31,7 +31,7 @@
             <div class="column is-4">
                 <div class="box" id="search-drink">
                     <select id="drink-dropdown">
-                        
+
                         <option value="17207">Piña Colada</option>
                         <option value="11000">Mojito</option>
                         <option value="11007">Margarita</option>
@@ -58,40 +58,44 @@
 
 
             <div class="column is-8">
-                <div class="card" id="drink-image">
+                <div class="card" id="drink-div">
                     <div class="card-content">
-                        <div class="content" id="image">
-                           
+                        <div class="content" id="drink-content">
+                            <div class="card" id="drink-image">
+                                <div class="card-content">
+                                    <div class="content" id="image">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                </div>
-                <div class="card" id="recipe">
+                    </div>
+                    <!-- <div class="card" id="recipe">
                     <div class="card-content">
                         <div class="content" id="drink-content">
 
 
                 
+                </div> -->
+
                 </div>
+
+
 
             </div>
 
-
-
         </div>
 
-    </div>
+        <div id="modal">
+            <div class="modalconent">
 
-    <div id="modal">
-        <div class="modalconent">
-             
-    
-            <h1>Are you of legal age?</h1>
-            <p>By entering this website, you agree that you're 21+ years old.</p>
-            <button id="yes">Yes</button>
-            <button id="no">No</button>
+
+                <h1>Are you of legal age?</h1>
+                <p>By entering this website, you agree that you're 21+ years old.</p>
+                <button id="yes">Yes</button>
+                <button id="no">No</button>
+            </div>
         </div>
-    </div>
 
 
 
@@ -107,8 +111,8 @@
 
 
 
-    <!-- <script src="assets\js\drinkScript.js"></script> -->
-    <script src="assets/js/script.js"></script>
+        <!-- <script src="assets\js\drinkScript.js"></script> -->
+        <script src="assets/js/script.js"></script>
 </body>
 
 </html>
