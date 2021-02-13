@@ -58,51 +58,27 @@ $("#drink-dropdown").on("click", function(){
 )
 
 $(document).ready(function(){
-<<<<<<< HEAD
-=======
-
->>>>>>> eb3ff0bc47b7f18d8c87f8e6298bfdeedd1d7d30
-  var confirm = ('yes')
-
-  
+  var confirm = ("yes")
+  var deny = ("no")
  window.onload = function () {
-   if (confirm) {
-   document.getElementById('yes').onclick = function () {
-       document.getElementById('modal').style.display = 'none'
-       console.log(onclick);
-       //why is the on click null?
-       
-   }}
-  //  else {
-  // //redirect to modalNo.html
-   
+  if (confirm)
+  document.getElementById('yes').onclick = function () {
+   document.getElementById('modal').style.display = "none"
+   }
+   else {
      
    
 
-  //  }
-<<<<<<< HEAD
+   
  
- };
-=======
-
  }};
->>>>>>> eb3ff0bc47b7f18d8c87f8e6298bfdeedd1d7d30
-
- //making no button function we might need to deploy the 2nd html page as its own entity so we have a live url to redirect to.
-document.getElementById('no').onclick = function() {
-  location.href = "https://www.bbc.com/";
-};
-
-
-
-
 
    var drinkVal;
 
  $("#drink-dropdown").on("change", function (e) {
    // drinkVal.stopImmediatePropagation();
    // return false;
-   $( "ul" ).empty();
+  //  $( "ul" ).empty();
    $( "h1" ).empty();
    $( "p" ).empty();
 
@@ -154,16 +130,16 @@ document.getElementById('no').onclick = function() {
    for (var i = 0; i < 15; i++) {
      // ingredients with drink measurements
      //
-     const drinkIngredients = document.createElement("ul");
+     const drinkIngredients = document.createElement("p");
      drinkDiv.appendChild(drinkIngredients);
      const value = drink[`strIngredient${i}`] + ": " + drink[`strMeasure${i}`];
      // console.log(drink[`strIngredient${i}`] + ": " + drink[`strMeasure${i}`])
      // add drink name
      if (drink[`strIngredient${i}`] != null) {
-       listItem = document.createElement("ul");
+       listItem = document.createElement("p");
        listItem.innerHTML = value;
-       $("ul").attr("id", i + 1);
-       
+       $("p").attr("id", i + 1);
+       listItem.className="drink-p"
        drinkIngredients.appendChild(listItem);
      }
 
@@ -171,19 +147,20 @@ document.getElementById('no').onclick = function() {
    }
 
  
-   const drinkIngredients = document.createElement("ul");
-   drinkDiv.appendChild(drinkIngredients);
-   const getIngredients = Object.keys(drink)
-     .filter(function (ingredient) {
-       return ingredient.indexOf("strIngredient") == 0;
-     })
-     // add measurements to this
-     .reduce(function (ingredients, ingredient) {
-       if (drink[ingredient] != null) {
-         ingredients[ingredient] = drink[ingredient];
-       }
-       return ingredients;
-     }, {});
+  //  const drinkIngredients = document.createElement("p");
+
+  //  drinkDiv.appendChild(drinkIngredients);
+  //  const getIngredients = Object.keys(drink)
+  //    .filter(function (ingredient) {
+  //      return ingredient.indexOf("strIngredient") == 0;
+  //    })
+  //    // add measurements to this
+  //    .reduce(function (ingredients, ingredient) {
+  //      if (drink[ingredient] != null) {
+  //        ingredients[ingredient] = drink[ingredient];
+  //      }
+  //      return ingredients;
+  //    }, {});
 
    // for (let key in getIngredients) {
    //   let value = getIngredients[key];
@@ -194,30 +171,15 @@ document.getElementById('no').onclick = function() {
 
    // instructions
    const drinkInstructions = document.createElement('p');
+   drinkInstructions.className="drink-p"
+   
+
 
    drinkDiv.appendChild(drinkInstructions);
    const getInstructions = drink.strInstructions
-
+   
    drinkInstructions.append(getInstructions);
  }
-//  function getPhotos(images) {
-//     images.map(image => {
-//       console.log(image)
-//     })
-//  }
- fetch("https://api.pexels.com/v1/search?query=people",{
-   headers: {
-     Authorization: "563492ad6f9170000100000134e84897333d4b1f95f23ba765c754d6"
-   }
- })
-    .then(resp => {
-      
-      return resp.json()
-    })
-    .then(data => {
-      console.log(data.photos)
-    })
-
-
 });
+
 
