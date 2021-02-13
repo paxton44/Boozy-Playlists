@@ -58,21 +58,35 @@ $("#drink-dropdown").on("click", function(){
 )
 
 $(document).ready(function(){
-  var confirm = ("yes")
+  var confirm = ('yes')
+
+  
  window.onload = function () {
    if (confirm) {
    document.getElementById('yes').onclick = function () {
-       document.getElementById('modal').style.display = "none"
+       document.getElementById('modal').style.display = 'none'
+       console.log(onclick);
+       //why is the on click null?
+       
    }}
-   else {
-  
+  //  else {
+  // //redirect to modalNo.html
    
      
    
 
-   }
+  //  }
  
  };
+
+ //making no button function we might need to deploy the 2nd html page as its own entity so we have a live url to redirect to.
+document.getElementById('no').onclick = function() {
+  location.href = "https://www.bbc.com/";
+};
+
+
+
+
 
    var drinkVal;
 
