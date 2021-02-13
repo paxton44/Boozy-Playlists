@@ -113,7 +113,35 @@ $(document).ready(function(){
         return resp.json()
       })
       .then(data => {
-        console.log(data.photos)
+        console.log(data)
+
+        var drinkimages = {moscowMule:{img:  data.photos[0].src.medium},
+        "Gin + Tonic":{img:  data.photos[1].src.medium},
+        "Mojito":{img:  data.photos[0].src.medium},
+        "Pina Colada":{img:  data.photos[1].src.medium},
+        "Margarita":{img:  data.photos[0].src.medium}}
+
+        
+        
+
+        // if drinkname matches variable, display image
+        // if not, display placeholder
+          console.log(drinkName)
+          console.log(drinkimages[drinkName])
+          var imgEL = document.createElement('img');
+          imgEL.setAttribute("src", drinkimages[drinkName].img)
+          
+          document.getElementById('drink-image').appendChild(imgEL);
+        
+        // var img = document.createElement('img');
+        // img.src = 
+        // document.getElementById('drink-image').appendChild(img);
+
+        // $('#drink-image').prepend('<img + moscowMule />')
+        // console.log('test')
+
+        // clear out div
+
       })
 // pexels drinkPix api filtering 
       // fetch(requestUrl)
@@ -129,7 +157,13 @@ $(document).ready(function(){
       //   var dirtyMartini
       //   var screwDriver
       //   var whiskeySour 
-       
+
+      // var moscow-mule= data.photos[0].src.medium
+       // var gnt = data.photos[1].src.medium
+       // mojito = data.photos[0].src.medium
+
+
+       // placeholders = oldfashioned, manhattan, srewdriver, long island, dirty martini, cosmo, whiskey sour
    
    
    
