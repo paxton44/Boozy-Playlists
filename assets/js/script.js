@@ -58,6 +58,7 @@ $("#drink-dropdown").on("click", function(){
 )
 
 $(document).ready(function(){
+
   var confirm = ('yes')
 
   
@@ -76,8 +77,8 @@ $(document).ready(function(){
    
 
   //  }
- 
- };
+
+ }};
 
  //making no button function we might need to deploy the 2nd html page as its own entity so we have a live url to redirect to.
 document.getElementById('no').onclick = function() {
