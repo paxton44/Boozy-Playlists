@@ -1,14 +1,27 @@
 html, body {
-    background-color:#091010;
+    background-color:#172929;
    /* height: 100%; */
 }
-
-/* select {
-    margin-left: auto;
-    margin-right: auto;
-    appearance: none;
+.hero {
     text-align: center;
-    background-color:blanchedalmond;
+}
+
+
+.title {
+    font-family: 'Abril Fatface', cursive;
+    color:#F5F5F5 !important;
+    
+}
+.subtitle {
+    font-family: 'Open Sans', sans-serif;
+    color: #F5F5F5 !important;
+}
+
+select {
+    
+  
+     
+    background-color:#F5F5F5 ;
     box-sizing: border-box;
     border: 1px solid black;
     width: 50%;
@@ -16,7 +29,8 @@ html, body {
     font-size: 16px;
     font-family: sans-serif;
     
-} */
+}
+
 
 #search-drink {
     margin-left: auto;
@@ -35,6 +49,7 @@ html, body {
 #playlist {
     height: 400px;
     width: 320px;
+    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 0.35rem;
@@ -45,39 +60,34 @@ html, body {
     margin-bottom: 500px ;
 }
 
-#recipe {
-    border-radius: 0.35rem;
-    border: 1px solid;
-    padding-top: 180px;
-    box-shadow: 5px 10px 18px #000;
-    margin-top: -10rem;
-    background-color:#d2d8bf;
-    margin-bottom: 500px ;
+
+#drink-div {
+        border-radius: 0.35rem;
+        border: 1px solid;
+      
+        box-shadow: 5px 10px 18px #000;
+      
+        background-color:#e0e4d5;
+        margin-bottom: 500px ;
     
-   
 
 
 }
+.drink-p {
+    font-family: 'Open Sans', sans-serif;
+}
 
 #drink-image {
-    background-color:#d2d8bf;
+    background-color:FFFAF0;
     width: 400px;
-    height: 400px;
+    height: 300px;
     border-radius: 0.35rem;
     box-shadow: 5px 10px 18px #000;
     margin-left: auto;
     margin-right: auto;
-    z-index: 4;
+    margin-top: 0px;
+    background-image: url(../images/alcohol2.jpg);
 }
-   
-.drink-image {
-    background-image: url(/assets/images/alcohol.jpg);
-}
-   
-   
-
-
-
 #drink-dropdown {
     margin-left: 90px;
     margin-top: 145px;
@@ -86,7 +96,9 @@ html, body {
 }
 
 #drink-content {
-    text-align: center;
+    text-align:center;
+    font-size: large;
+    font-family: 'Abril Fatface', cursive;
 }
 
 #modal {
@@ -99,7 +111,7 @@ html, body {
     width: 50%;
     
 }
-.modalconent {
+.modalcontent {
     position: absolute;
     top: 50%;
     left: 50%;

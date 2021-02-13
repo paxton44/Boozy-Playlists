@@ -43,6 +43,32 @@ $(document).ready(function () {
     $("h1").empty();
     $("p").empty();
 
+<<<<<<< HEAD
+$(document).ready(function(){
+  var confirm = ("yes")
+  var deny = ("no")
+ window.onload = function () {
+  if (confirm)
+  document.getElementById('yes').onclick = function () {
+   document.getElementById('modal').style.display = "none"
+   }
+   else {
+     
+   
+
+   
+ 
+ }};
+
+   var drinkVal;
+
+ $("#drink-dropdown").on("change", function (e) {
+   // drinkVal.stopImmediatePropagation();
+   // return false;
+  //  $( "ul" ).empty();
+   $( "h1" ).empty();
+   $( "p" ).empty();
+=======
     drinkVal = $("#drink-dropdown").val();
 
     var myLink = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkVal}`;
@@ -130,6 +156,7 @@ $(document).ready(function () {
         drinkIngredients.appendChild(listItem);
       }
 
+>>>>>>> e52fe14c63409448145bbb8e7a9693076c766cf5
 
     }
 
@@ -143,5 +170,80 @@ $(document).ready(function () {
     drinkInstructions.append(getInstructions);
   }
 
+<<<<<<< HEAD
+ function drinkData(data) {
+   let drink = data.drinks[0];
+   const drinkDiv = document.getElementById("drink-content");
+   
+   
+   
+   // strDrink
+   const drinkName = drink.strDrink;
+   console.log(drinkName);
+
+   // empty out div 
+
+   const heading = document.createElement("h1");
+   heading.innerHTML = drinkName;
+   drinkDiv.appendChild(heading);
+
+   for (var i = 0; i < 15; i++) {
+     // ingredients with drink measurements
+     //
+     const drinkIngredients = document.createElement("p");
+     drinkDiv.appendChild(drinkIngredients);
+     const value = drink[`strIngredient${i}`] + ": " + drink[`strMeasure${i}`];
+     // console.log(drink[`strIngredient${i}`] + ": " + drink[`strMeasure${i}`])
+     // add drink name
+     if (drink[`strIngredient${i}`] != null) {
+       listItem = document.createElement("p");
+       listItem.innerHTML = value;
+       $("p").attr("id", i + 1);
+       listItem.className="drink-p"
+       drinkIngredients.appendChild(listItem);
+     }
+
+     
+   }
+
+ 
+  //  const drinkIngredients = document.createElement("p");
+
+  //  drinkDiv.appendChild(drinkIngredients);
+  //  const getIngredients = Object.keys(drink)
+  //    .filter(function (ingredient) {
+  //      return ingredient.indexOf("strIngredient") == 0;
+  //    })
+  //    // add measurements to this
+  //    .reduce(function (ingredients, ingredient) {
+  //      if (drink[ingredient] != null) {
+  //        ingredients[ingredient] = drink[ingredient];
+  //      }
+  //      return ingredients;
+  //    }, {});
+
+   // for (let key in getIngredients) {
+   //   let value = getIngredients[key];
+   //   listItem = document.createElement("li");
+   //   listItem.innerHTML = value;
+   //   drinkIngredients.appendChild(listItem);
+   // }
+
+   // instructions
+   const drinkInstructions = document.createElement('p');
+   drinkInstructions.className="drink-p"
+   
+
+
+   drinkDiv.appendChild(drinkInstructions);
+   const getInstructions = drink.strInstructions
+   
+   drinkInstructions.append(getInstructions);
+ }
+});
+
+
+=======
 
 });
+>>>>>>> e52fe14c63409448145bbb8e7a9693076c766cf5

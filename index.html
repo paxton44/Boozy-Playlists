@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
     <title>Boozy Playlists</title>
 
 
@@ -17,12 +19,13 @@
 
     <section class="hero">
         <div class="hero-body">
-            <p class="title has-text-white">
-                Boozy playlists
-            </p>
-            <p class="subtitle has-text-white">
+            <div class="title is-size-1">
+                Boozy Playlists
+            </div>
+            <br>
+            <div class="subtitle">
                 Alcohol might not solve your problems, but listening to music while you drink will!
-            </p>
+            </div>
         </div>
     </section>
 
@@ -31,6 +34,7 @@
             <div class="column is-4">
                 <div class="box" id="search-drink">
                     <select id="drink-dropdown">
+
                         <!-- add in <a> with href for playlist i put the href above the associated playlist-->
 
                         <!--https://open.spotify.com/embed/playlist/79ZpXPU2kGgeO2ny6KDXSh"-->
@@ -84,32 +88,30 @@
 
 
             <div class="column is-8">
-                <div class="card" id="drink-image">
-                    <div class="card-content">
-                        <div class="content" id="image">
-
-                        </div>
-                    </div>
-
-                </div>
-                <div class="card" id="recipe">
+                <div class="card" id="drink-div">
                     <div class="card-content">
                         <div class="content" id="drink-content">
-
-
-
+                            <div class="card" id="drink-image">
+                                <div class="card-content">
+                                    <div class="content" id="image">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
 
 
-
                 </div>
+
+
+
 
             </div>
 
+
             <div id="modal">
-                <div class="modalconent">
+                <div class="modalcontent">
 
 
                     <h1>Are you of legal age?</h1>
@@ -119,6 +121,7 @@
                 </div>
             </div>
 
+        </div>
 
 
 
@@ -130,11 +133,10 @@
 
 
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="assets/js/script.js"></script>
+       
 
-
-
-            <!-- <script src="assets\js\drinkScript.js"></script> -->
-            <script src="assets/js/script.js"></script>
 </body>
 
 </html>
