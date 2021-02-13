@@ -89,8 +89,26 @@ $(document).ready(function () {
       .then(data => {
         console.log(data.photos)
       })
-
-    // empty out div 
+// pexels drinkPix api filtering 
+      fetch(requestUrl)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        console.log(data)
+        
+        var pinaColada = data.id.requestUrl;
+        var mojito
+        var margarita 
+        var dirtyMartini
+        var screwDriver
+        var whiskeySour 
+       
+   
+   
+   
+   
+      // empty out div 
 
     const heading = document.createElement("h1");
     heading.innerHTML = drinkName;
