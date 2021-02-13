@@ -96,11 +96,7 @@ $(document).ready(function () {
         "Margarita":{img:  data.photos[0].src.medium}}
 
         
-        // var moscowMule = data.photos[0].src.medium
-        // var gnt = data.photos[1].src.medium
-        // var mojito = data.photos[0].src.medium
-        // var pinaColada = data.photos[1].src.medium
-        // var margarita = data.photos[0].src.medium
+        
 
         // if drinkname matches variable, display image
         // if not, display placeholder
