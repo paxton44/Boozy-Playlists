@@ -54,20 +54,19 @@
 // var myLink = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkVal}`
 $(document).ready(function(){
   var confirm = ("yes")
+  var deny = ("no")
  window.onload = function () {
-   if (confirm) {
-   document.getElementById('yes').onclick = function () {
-       document.getElementById('modal').style.display = "none"
-   }}
+  if (confirm)
+  document.getElementById('yes').onclick = function () {
+   document.getElementById('modal').style.display = "none"
+   }
    else {
-  
-   
      
    
 
-   }
+   
  
- };
+ }};
 
    var drinkVal;
 
