@@ -58,6 +58,10 @@ $("#drink-dropdown").on("click", function(){
 )
 
 $(document).ready(function(){
+<<<<<<< HEAD
+=======
+
+>>>>>>> eb3ff0bc47b7f18d8c87f8e6298bfdeedd1d7d30
   var confirm = ('yes')
 
   
@@ -76,8 +80,13 @@ $(document).ready(function(){
    
 
   //  }
+<<<<<<< HEAD
  
  };
+=======
+
+ }};
+>>>>>>> eb3ff0bc47b7f18d8c87f8e6298bfdeedd1d7d30
 
  //making no button function we might need to deploy the 2nd html page as its own entity so we have a live url to redirect to.
 document.getElementById('no').onclick = function() {
@@ -191,5 +200,24 @@ document.getElementById('no').onclick = function() {
 
    drinkInstructions.append(getInstructions);
  }
+//  function getPhotos(images) {
+//     images.map(image => {
+//       console.log(image)
+//     })
+//  }
+ fetch("https://api.pexels.com/v1/search?query=people",{
+   headers: {
+     Authorization: "563492ad6f9170000100000134e84897333d4b1f95f23ba765c754d6"
+   }
+ })
+    .then(resp => {
+      
+      return resp.json()
+    })
+    .then(data => {
+      console.log(data.photos)
+    })
+
+
 });
 
