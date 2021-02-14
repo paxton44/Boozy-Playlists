@@ -40,6 +40,7 @@ $("#drink-dropdown").on("change", function (e) {
   //  $( "ul" ).empty();
   $("h1").empty();
   $("p").empty();
+  $("#drink-image").empty();
   drinkVal = $("#drink-dropdown").val();
 
   
@@ -155,6 +156,3 @@ function drinkData(data) {
   drinkInstructions.append(getInstructions);
 }
 });
-
-
-
