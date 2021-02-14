@@ -4,80 +4,34 @@ $("#drink-dropdown").on("click", function () {
 
 $(document).ready(function () {
   var confirm = ('yes')
-
-
   window.onload = function () {
     if (confirm) {
       document.getElementById('yes').onclick = function () {
         document.getElementById('modal').style.display = 'none'
         console.log(onclick);
         //why is the on click null?
-
       }
     }
-    //  else {
-    // //redirect to modalNo.html
-
-
-
-
-    //  }
-
   };
-
-  //making no button function we might need to deploy the 2nd html page as its own entity so we have a live url to redirect to.
+  //No Modal Redirect to age appropriate page. 
   document.getElementById('no').onclick = function () {
-    location.href = "https://www.bbc.com/";
+    location.href = "modalNo.html";
   };
 
-
-
-
-
+  //Cocktail API Fetch 
   var drinkVal;
 
   $("#drink-dropdown").on("change", function (e) {
-    // drinkVal.stopImmediatePropagation();
-    // return false;
-    $("ul").empty();
     $("h1").empty();
     $("p").empty();
-
-<<<<<<< HEAD
-$(document).ready(function(){
-  var confirm = ("yes")
-  var deny = ("no")
- window.onload = function () {
-  if (confirm)
-  document.getElementById('yes').onclick = function () {
-   document.getElementById('modal').style.display = "none"
-   }
-   else {
-     
-   
-
-   
- 
- }};
-
-   var drinkVal;
-
- $("#drink-dropdown").on("change", function (e) {
-   // drinkVal.stopImmediatePropagation();
-   // return false;
-  //  $( "ul" ).empty();
-   $( "h1" ).empty();
-   $( "p" ).empty();
-=======
+    $("#drink-image").empty();
     drinkVal = $("#drink-dropdown").val();
 
     var myLink = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkVal}`;
-    // var e = $("#drink-dropdown").val();
-    // var result = e.options[e.selectedIndex]
+    
 
     e.preventDefault();
     console.log(drinkVal);
-    // mojito API
     fetch(myLink)
       .then(function (drinkVal) {
         return drinkVal.json();
@@ -86,9 +40,6 @@ $(document).ready(function(){
         console.log(data);
         drinkData(data);
       });
-
-
-
   });
 
   let drinkName;
@@ -96,8 +47,6 @@ $(document).ready(function(){
   function drinkData(data) {
     let drink = data.drinks[0];
     const drinkDiv = document.getElementById("drink-content");
-
-
 
     // strDrink
     drinkName = drink.strDrink;
@@ -114,61 +63,66 @@ $(document).ready(function(){
       })
       .then(data => {
         console.log(data)
+        var drinkimages = {
 
-        var drinkimages = {moscowMule:{img:  data.photos[0].src.medium},
-        "Gin + Tonic":{img:  data.photos[1].src.medium},
-        "Mojito":{img:  data.photos[0].src.medium},
-        "Pina Colada":{img:  data.photos[1].src.medium},
-        "Margarita":{img:  data.photos[0].src.medium}}
+          "Moscow Mule": {
+            img: data.photos[0].src.medium
+          },
 
-        
-        
+          "Gin And Tonic": {
+            img: data.photos[1].src.medium
+          },
 
-        // if drinkname matches variable, display image
-        // if not, display placeholder
-          console.log(drinkName)
-          console.log(drinkimages[drinkName])
-          var imgEL = document.createElement('img');
-          imgEL.setAttribute("src", drinkimages[drinkName].img)
-          
-          document.getElementById('drink-image').appendChild(imgEL);
-        
-        // var img = document.createElement('img');
-        // img.src = 
-        // document.getElementById('drink-image').appendChild(img);
+          "Mojito": {
+            img: data.photos[0].src.medium
+          },
 
-        // $('#drink-image').prepend('<img + moscowMule />')
-        // console.log('test')
+          "Pina Colada": {
+            img: data.photos[1].src.medium
+          },
+          //assets\images\Dirty Martini.jpg
+          "Dirty Martini": {
+            img: data.photos[0].src.medium
+          },
+          //assets\images\ScrewDriver.jpg
+          "Screwdriver": {
+            img: data.photos[1].src.medium
+          },
+          //assets\images\WhiskeySour.jpg
+          "Whiskey Sour": {
+            img: data.photos[1].src.medium
+          },
+          //assets\images\ManhattanCocktail.jpg
+          "Manhattan": {
+            img: data.photos[0].src.medium
+          },
+          //assets\images\OldFashioned.jpg
+          "Old Fashioned": {
+            img: data.photos[0].src.medium
+          },
+          //assets\images\longIslandIcedTeaDrink.jpg
+          "Long Island Iced Tea": {
+            img: data.photos[0].src.medium
+          },
 
-        // clear out div
+          "Margarita": {
+            img: data.photos[0].src.medium
+          },
+          //assets\images\cosmoDope.jpg
+          "Cosmopolitan": {
+            img: data.photos[0].src.medium
+          },
+        }
+        //
+        console.log(drinkName)
+        console.log(drinkimages[drinkName])
+        var imgEL = document.createElement('img');
+        imgEL.setAttribute("src", drinkimages[drinkName].img)
+        document.getElementById('drink-image').appendChild(imgEL);
 
       })
-// pexels drinkPix api filtering 
-      // fetch(requestUrl)
-      // .then(function (response) {
-      //   return response.json();
-      // })
-      // .then(function (data) {
-      //   console.log(data)
-        
-      //   var pinaColada = data.id.requestUrl;
-      //   var mojito
-      //   var margarita 
-      //   var dirtyMartini
-      //   var screwDriver
-      //   var whiskeySour 
 
-      // var moscow-mule= data.photos[0].src.medium
-       // var gnt = data.photos[1].src.medium
-       // mojito = data.photos[0].src.medium
-
-
-       // placeholders = oldfashioned, manhattan, srewdriver, long island, dirty martini, cosmo, whiskey sour
-   
-   
-   
-   
-      // empty out div 
+    // empty out div 
 
     const heading = document.createElement("h1");
     heading.innerHTML = drinkName;
@@ -177,107 +131,33 @@ $(document).ready(function(){
     for (var i = 0; i < 15; i++) {
       // ingredients with drink measurements
       //
-      const drinkIngredients = document.createElement("ul");
+      const drinkIngredients = document.createElement("p");
       drinkDiv.appendChild(drinkIngredients);
       const value = drink[`strIngredient${i}`] + ": " + drink[`strMeasure${i}`];
       // console.log(drink[`strIngredient${i}`] + ": " + drink[`strMeasure${i}`])
       // add drink name
       if (drink[`strIngredient${i}`] != null) {
-        listItem = document.createElement("ul");
+        listItem = document.createElement("p");
         listItem.innerHTML = value;
-        $("ul").attr("id", i + 1);
-
+        $("p").attr("id", i + 1);
+        listItem.className = "drink-p"
         drinkIngredients.appendChild(listItem);
       }
 
->>>>>>> e52fe14c63409448145bbb8e7a9693076c766cf5
 
     }
 
 
+
     // instructions
     const drinkInstructions = document.createElement('p');
+    drinkInstructions.className = "drink-p"
+
+
 
     drinkDiv.appendChild(drinkInstructions);
     const getInstructions = drink.strInstructions
 
     drinkInstructions.append(getInstructions);
   }
-
-<<<<<<< HEAD
- function drinkData(data) {
-   let drink = data.drinks[0];
-   const drinkDiv = document.getElementById("drink-content");
-   
-   
-   
-   // strDrink
-   const drinkName = drink.strDrink;
-   console.log(drinkName);
-
-   // empty out div 
-
-   const heading = document.createElement("h1");
-   heading.innerHTML = drinkName;
-   drinkDiv.appendChild(heading);
-
-   for (var i = 0; i < 15; i++) {
-     // ingredients with drink measurements
-     //
-     const drinkIngredients = document.createElement("p");
-     drinkDiv.appendChild(drinkIngredients);
-     const value = drink[`strIngredient${i}`] + ": " + drink[`strMeasure${i}`];
-     // console.log(drink[`strIngredient${i}`] + ": " + drink[`strMeasure${i}`])
-     // add drink name
-     if (drink[`strIngredient${i}`] != null) {
-       listItem = document.createElement("p");
-       listItem.innerHTML = value;
-       $("p").attr("id", i + 1);
-       listItem.className="drink-p"
-       drinkIngredients.appendChild(listItem);
-     }
-
-     
-   }
-
- 
-  //  const drinkIngredients = document.createElement("p");
-
-  //  drinkDiv.appendChild(drinkIngredients);
-  //  const getIngredients = Object.keys(drink)
-  //    .filter(function (ingredient) {
-  //      return ingredient.indexOf("strIngredient") == 0;
-  //    })
-  //    // add measurements to this
-  //    .reduce(function (ingredients, ingredient) {
-  //      if (drink[ingredient] != null) {
-  //        ingredients[ingredient] = drink[ingredient];
-  //      }
-  //      return ingredients;
-  //    }, {});
-
-   // for (let key in getIngredients) {
-   //   let value = getIngredients[key];
-   //   listItem = document.createElement("li");
-   //   listItem.innerHTML = value;
-   //   drinkIngredients.appendChild(listItem);
-   // }
-
-   // instructions
-   const drinkInstructions = document.createElement('p');
-   drinkInstructions.className="drink-p"
-   
-
-
-   drinkDiv.appendChild(drinkInstructions);
-   const getInstructions = drink.strInstructions
-   
-   drinkInstructions.append(getInstructions);
- }
 });
-
-
-=======
-
-});
->>>>>>> e52fe14c63409448145bbb8e7a9693076c766cf5
