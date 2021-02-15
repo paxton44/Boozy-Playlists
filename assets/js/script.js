@@ -15,7 +15,7 @@ $(document).ready(function () {
   };
   //No Modal Redirect to age appropriate page. 
   document.getElementById('no').onclick = function () {
-    location.href = "modalNo.html";
+    location.assign(href = "modalNo.html")
   };
 
   //Cocktail API Fetch 

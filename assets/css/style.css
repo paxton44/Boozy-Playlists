@@ -37,7 +37,7 @@ select {
     margin-right: auto;
     height: 250px;
     width: 400px;
-    background-image: url(../images/black-white-tape.jpeg);
+    background-image: url(../images/tape.jpg);
     
     border-radius: 0.35rem;
     margin-bottom: 10px;
@@ -103,16 +103,18 @@ select {
 
 #modal {
     position: fixed;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: auto auto 0 300px;
-    background: rgba(0, 0, 0, 0.8);
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 280px;
+    margin-bottom: 300px;
+    background: rgba(0, 0, 0, 1);
     z-index: 99999;
     height: 500px;
-    width: 50%;
+    width: 800px;
     
 }
 .modalcontent {
     position: absolute;
+    text-align: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -121,4 +123,16 @@ select {
     font-size: x-large;
     width: 50%;
     padding: 20px;
+}
+#no-playlist {
+    height: 400px;
+    width: 320px;
+    margin-left: 500px;
+    margin-right: auto;
+    border-radius: 0.35rem;
+    background-color: #0c1616;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px 18px #000;
+    margin-bottom: 300px;
 }
