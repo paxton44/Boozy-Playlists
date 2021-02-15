@@ -28,6 +28,7 @@ Mihaela Kokich and Taylor Wright created the HTML and CSS, while Mitchell Flood 
 *  Main Page
 
 ![Main Page](Assets/images/The-Weather-Outside-is-Weather.png)
+![Demo](https://user-images.githubusercontent.com/74884495/107984884-2f9c3800-6f86-11eb-9d94-0f4ed2c87efd.gif)
 
 
 ## Credits
