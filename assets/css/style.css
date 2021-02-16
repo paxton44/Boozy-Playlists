@@ -80,7 +80,7 @@ select {
 #drink-image {
     background-color:FFFAF0;
     width: 400px;
-    height: 300px;
+    height: 268px;
     border-radius: 0.35rem;
     box-shadow: 5px 10px 18px #000;
     margin-left: auto;
@@ -88,6 +88,16 @@ select {
     margin-top: 0px;
     background-image: url(../images/alcohol2.jpg) ;
 }
+
+.img-size {
+    height: 530px;
+    width: 400px;
+    
+}
+
+
+
+
 #drink-dropdown {
     margin-left: 90px;
     margin-top: 145px;

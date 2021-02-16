@@ -82,11 +82,11 @@ $(document).ready(function () {
           },
     
           "Mojito": {
-            img: data.results[0].urls.small
+            img: data.results[3].urls.small
           },
     
           "Pina Colada": {
-            img: data.results[17].urls.small
+            img: data.results[2].urls.small
           },
           //assets\images\Dirty Martini.jpg
           "Dirty Martini": {
@@ -95,9 +95,9 @@ $(document).ready(function () {
           //assets\images\ScrewDriver.jpg
           "Screwdriver": {
 
-            img: Object.assign(new Image, {
-              src: "assets/images/ScrewDriver.jpg"
-            })
+            // img: Object.assign(new Image, {
+            //   src: "assets/images/ScrewDriver.jpg"
+            // })
 
             img: data.results[0].urls.small
 
@@ -114,7 +114,7 @@ $(document).ready(function () {
           "Old Fashioned": {
             img: data.results[3].urls.small
           },
-          //assets\images\longIslandIcedTeaDrink.jpg
+          // assets\images\longIslandIcedTeaDrink.jpg
           "Long Island Iced Tea": {
             img: data.results[0].urls.small
           },
@@ -138,16 +138,7 @@ $(document).ready(function () {
         }
 
         
-      // else {
-      //     img.src="Site/assets/SadObama.jpg"
-      // }   
-        // if (drinkName == "Long Island Iced Tea") 
-        //  var img = document. createElement("img");
-        //  img.src = "longislandIcedTea.jpg";
-        // var src = document. getElementById('drink-image');
-        //   src. appendChild(img);
-
-        //
+      
 
         
         console.log(drinkName)
@@ -155,6 +146,7 @@ $(document).ready(function () {
         var imgEL = document.createElement('img');
         imgEL.setAttribute("src", drinkimages[drinkName].img)
         document.getElementById('drink-image').appendChild(imgEL);
+        // imgEL.className="img-size";
 
         if (drinkName == "Long Island Iced Tea"){
           imgEL.src = "assets/images/longIslandIcedTeaDrink.jpg";
@@ -168,6 +160,10 @@ $(document).ready(function () {
         {
           imgEL.src = "assets/images/ManhattanCocktail.jpg";
         }
+        else if(drinkName === "Cosmopolitan"){
+          imgEL.className="img-size";
+        }
+        
 
         
 
@@ -214,35 +210,4 @@ $(document).ready(function () {
   }
 });
 
-// var imgArray = new Array();
 
-// imgArray[0] = new Image();
-// imgArray[0].src = 'images/img/Splash_image1.jpg';
-
-// imgArray[1] = new Image();
-// imgArray[1].src = 'images/img/Splash_image2.jpg';
-
-// /* ... more images ... */
-
-// imgArray[5] = new Image();
-// imgArray[5].src = 'images/img/Splash_image6.jpg';
-
-// /*------------------------------------*/
-
-// function nextImage(element)
-// {
-//     var img = document.getElementById(element);
-
-//     for(var i = 0; i < imgArray.length;i++)
-//     {
-//         if(imgArray[i].src == img.src) // << check this
-//         {
-//             if(i === imgArray.length){
-//                 document.getElementById(element).src = imgArray[0].src;
-//                 break;
-//             }
-//             document.getElementById(element).src = imgArray[i+1].src;
-//             break;
-//         }
-//     }
-// }
