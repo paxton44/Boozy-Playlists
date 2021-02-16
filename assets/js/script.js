@@ -28,6 +28,12 @@ $(document).ready(function () {
     $("p").empty();
     $("#drink-image").empty();
     drinkVal = $("#drink-dropdown").val();
+    if (drinkVal === "Long Island Iced Tea"){
+      var img = document. createElement("img");
+      img.src = "longIslandIcedTea";
+      var src = document. getElementById('drink-image');
+      src.appendChild(img);
+    }
 
     var myLink = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkVal}`;
     
@@ -88,7 +94,13 @@ $(document).ready(function () {
           },
           //assets\images\ScrewDriver.jpg
           "Screwdriver": {
+
+            img: Object.assign(new Image, {
+              src: "assets/images/ScrewDriver.jpg"
+            })
+
             img: data.results[0].urls.small
+
           },
           //assets\images\WhiskeySour.jpg
           "Whiskey Sour": {
@@ -111,16 +123,54 @@ $(document).ready(function () {
             img: data.results[0].urls.small
           },
           //assets\images\cosmoDope.jpg
+
+          // "Cosmopolitan": {
+          //   img: data.photos[0].src.medium
+          // }, 
+
+          
+
+
           "Cosmopolitan": {
             img: data.results[6].urls.small
           },
+
         }
+
+        
+      // else {
+      //     img.src="Site/assets/SadObama.jpg"
+      // }   
+        // if (drinkName == "Long Island Iced Tea") 
+        //  var img = document. createElement("img");
+        //  img.src = "longislandIcedTea.jpg";
+        // var src = document. getElementById('drink-image');
+        //   src. appendChild(img);
+
         //
+
+        
         console.log(drinkName)
         console.log(drinkimages[drinkName])
         var imgEL = document.createElement('img');
         imgEL.setAttribute("src", drinkimages[drinkName].img)
         document.getElementById('drink-image').appendChild(imgEL);
+
+        if (drinkName == "Long Island Iced Tea"){
+          imgEL.src = "assets/images/longIslandIcedTeaDrink.jpg";
+        } 
+       
+        else if (drinkName === "Screwdriver")
+        {
+          imgEL.src = "assets/images/ScrewDriver.jpg";
+        }
+        else if (drinkName === "Manhattan")
+        {
+          imgEL.src = "assets/images/ManhattanCocktail.jpg";
+        }
+
+        
+
 
       })
 

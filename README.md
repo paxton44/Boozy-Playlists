@@ -18,16 +18,16 @@ Mihaela Kokich and Taylor Wright created the HTML and CSS, while Mitchell Flood 
 
 ## Installation
 
-1. live link: 
+1. Website Link: https://paxton44.github.io/teamAwesome/
 2. visit https://www.thecocktaildb.com/api.php
 3. visit https://bulma.io/
-4. https://www.pexels.com/api/ 
+4. visit https://www.pexels.com/api/ 
+5. visit https://unsplash.com/documentation
 
 
 ## Usage
 *  Main Page
 
-![Main Page](Assets/images/The-Weather-Outside-is-Weather.png)
 ![Demo](https://user-images.githubusercontent.com/74884495/107984884-2f9c3800-6f86-11eb-9d94-0f4ed2c87efd.gif)
 
 
@@ -36,6 +36,7 @@ Mihaela Kokich and Taylor Wright created the HTML and CSS, while Mitchell Flood 
 2. https://www.w3schools.com
 3. https://www.thecocktaildb.com/api.php
 4. https://www.pexels.com/api/ 
+5. https://unsplash.com/documentation
 
 ## License
 ...
