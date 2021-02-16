@@ -54,7 +54,7 @@ $(document).ready(function () {
     drinkName = drink.strDrink;
     console.log(drinkName);
 
-    fetch("https://api.unsplash.com/search/photos?page=1&per_page=30&query=" + drinkName, {
+    fetch("https://api.unsplash.com/search/photos?page=1&per_page=30&query=" + drinkName + "&q=80&w=400&h=300", {
       headers: {
         Authorization: "Client-ID V1jjhq2XEVk2M7V0aaCJ1hnJlqQBBoH913NDfbJrCfQ"
       }
@@ -68,51 +68,51 @@ $(document).ready(function () {
         var drinkimages = {
 
           "Moscow Mule": {
-            img: data.results[0].urls.small
+            img: data.results[0].urls.small 
           },
     
           "Gin And Tonic": {
-            img: data.results[16].urls.small
+            img: data.results[16].urls.small 
           },
     
           "Mojito": {
-            img: data.results[0].urls.small
+            img: data.results[3].urls.small 
           },
     
           "Pina Colada": {
-            img: data.results[17].urls.small
+            img: data.results[2].urls.small 
           },
           //assets\images\Dirty Martini.jpg
           "Dirty Martini": {
-            img: data.results[20].urls.small
+            img: data.results[20].urls.small 
           },
           //assets\images\ScrewDriver.jpg
           "Screwdriver": {
-            img: data.results[0].urls.small
+            img: data.results[0].urls.small 
           },
           //assets\images\WhiskeySour.jpg
           "Whiskey Sour": {
-            img: data.results[0].urls.small
+            img: data.results[0].urls.small 
           },
           //assets\images\ManhattanCocktail.jpg
           "Manhattan": {
-            img: data.results[0].urls.small
+            img: data.results[0].urls.small 
           },
           //assets\images\OldFashioned.jpg
           "Old Fashioned": {
-            img: data.results[3].urls.small
+            img: data.results[3].urls.small 
           },
           //assets\images\longIslandIcedTeaDrink.jpg
           "Long Island Iced Tea": {
-            img: data.results[0].urls.small
+            img: data.results[0].urls.small 
           },
     
           "Margarita": {
-            img: data.results[0].urls.small
+            img: data.results[0].urls.small 
           },
           //assets\images\cosmoDope.jpg
           "Cosmopolitan": {
-            img: data.results[6].urls.small
+            img: data.results[6].urls.small 
           },
         }
         //
@@ -121,9 +121,9 @@ $(document).ready(function () {
         var imgEL = document.createElement('img');
         imgEL.setAttribute("src", drinkimages[drinkName].img)
         document.getElementById('drink-image').appendChild(imgEL);
-
-      })
-
+       
+       
+     
     // empty out div 
 
     const heading = document.createElement("h1");
@@ -163,36 +163,3 @@ $(document).ready(function () {
     drinkInstructions.append(getInstructions);
   }
 });
-
-// var imgArray = new Array();
-
-// imgArray[0] = new Image();
-// imgArray[0].src = 'images/img/Splash_image1.jpg';
-
-// imgArray[1] = new Image();
-// imgArray[1].src = 'images/img/Splash_image2.jpg';
-
-// /* ... more images ... */
-
-// imgArray[5] = new Image();
-// imgArray[5].src = 'images/img/Splash_image6.jpg';
-
-// /*------------------------------------*/
-
-// function nextImage(element)
-// {
-//     var img = document.getElementById(element);
-
-//     for(var i = 0; i < imgArray.length;i++)
-//     {
-//         if(imgArray[i].src == img.src) // << check this
-//         {
-//             if(i === imgArray.length){
-//                 document.getElementById(element).src = imgArray[0].src;
-//                 break;
-//             }
-//             document.getElementById(element).src = imgArray[i+1].src;
-//             break;
-//         }
-//     }
-// }
