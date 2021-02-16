@@ -1,6 +1,4 @@
-$("#drink-dropdown").on("click", function () {
 
-})
 
 $(document).ready(function () {
   var confirm = ('yes')
@@ -33,7 +31,9 @@ $(document).ready(function () {
       img.src = "longIslandIcedTea";
       var src = document. getElementById('drink-image');
       src.appendChild(img);
+      
     }
+    
 
     var myLink = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkVal}`;
     
@@ -82,19 +82,11 @@ $(document).ready(function () {
           },
     
           "Mojito": {
-<<<<<<< HEAD
-            img: data.results[3].urls.small 
-          },
-    
-          "Pina Colada": {
-            img: data.results[2].urls.small 
-=======
             img: data.results[3].urls.small
           },
     
           "Pina Colada": {
             img: data.results[2].urls.small
->>>>>>> df98ffc4d877ec08dd243d3a866371dc8f1f5d83
           },
           //assets\images\Dirty Martini.jpg
           "Dirty Martini": {
@@ -102,17 +94,7 @@ $(document).ready(function () {
           },
           //assets\images\ScrewDriver.jpg
           "Screwdriver": {
-<<<<<<< HEAD
             img: data.results[0].urls.small 
-=======
-
-            // img: Object.assign(new Image, {
-            //   src: "assets/images/ScrewDriver.jpg"
-            // })
-
-            img: data.results[0].urls.small
-
->>>>>>> df98ffc4d877ec08dd243d3a866371dc8f1f5d83
           },
           //assets\images\WhiskeySour.jpg
           "Whiskey Sour": {
@@ -158,12 +140,6 @@ $(document).ready(function () {
         var imgEL = document.createElement('img');
         imgEL.setAttribute("src", drinkimages[drinkName].img)
         document.getElementById('drink-image').appendChild(imgEL);
-<<<<<<< HEAD
-       
-       
-     
-    // empty out div 
-=======
         
 
         if (drinkName == "Long Island Iced Tea"){
@@ -190,7 +166,6 @@ $(document).ready(function () {
       })
 
     
->>>>>>> df98ffc4d877ec08dd243d3a866371dc8f1f5d83
 
     const heading = document.createElement("h1");
     heading.innerHTML = drinkName;
@@ -229,8 +204,5 @@ $(document).ready(function () {
     drinkInstructions.append(getInstructions);
   }
 });
-<<<<<<< HEAD
-=======
 
 
->>>>>>> df98ffc4d877ec08dd243d3a866371dc8f1f5d83
