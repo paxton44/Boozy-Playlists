@@ -146,10 +146,10 @@ $(document).ready(function () {
         var imgEL = document.createElement('img');
         imgEL.setAttribute("src", drinkimages[drinkName].img)
         document.getElementById('drink-image').appendChild(imgEL);
-        // imgEL.className="img-size";
+        
 
         if (drinkName == "Long Island Iced Tea"){
-          imgEL.src = "assets/images/longIslandIcedTeaDrink.jpg";
+          imgEL.src = "assets/images/LongIslandIcedTea.jpg";
         } 
        
         else if (drinkName === "Screwdriver")
@@ -163,6 +163,7 @@ $(document).ready(function () {
         else if(drinkName === "Cosmopolitan"){
           imgEL.className="img-size";
         }
+        // else if(drinkName === "")
         
 
         
@@ -170,7 +171,7 @@ $(document).ready(function () {
 
       })
 
-    // empty out div 
+    
 
     const heading = document.createElement("h1");
     heading.innerHTML = drinkName;
