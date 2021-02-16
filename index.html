@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    
+
     <title>Boozy Playlists</title>
 
 
@@ -22,7 +22,7 @@
             <div class="title is-size-1">
                 Boozy Playlists
             </div>
-            
+
             <div class="subtitle">
                 Alcohol might not solve your problems, but listening to music while you drink will!
                 <br>
@@ -36,53 +36,81 @@
         <div class="columns">
             <div class="column is-4">
                 <div class="box" id="search-drink">
-                    <select id="drink-dropdown",>
-                    
+                    <select id="drink-dropdown" ,>
+
 
                         <!-- add in <a> with href for playlist i put the href above the associated playlist-->
-                            <option>Choices</option>
+                        <option>Choices</option>
                         <!--https://open.spotify.com/embed/playlist/79ZpXPU2kGgeO2ny6KDXSh"-->
 
-                        <option value="17207">Piña Colada</option>
+                        <option value="17207"
+                            playlistHref="https://open.spotify.com/embed/playlist/79ZpXPU2kGgeO2ny6KDXSh">Piña Colada
+                        </option>
                         <!--"https://open.spotify.com/embed/playlist/2qoSqBU7V04MOgTmF6HJNz" -->
 
-                        <option value="11000">Mojito</option>
+                        <option value="11000"
+                            playlistHref="https://open.spotify.com/embed/playlist/2qoSqBU7V04MOgTmF6HJNz">Mojito
+                        </option>
                         <!--"https://open.spotify.com/embed/playlist/79ZpXPU2kGgeO2ny6KDXSh" -->
 
-                        <option value="11007">Margarita</option>
+                        <option value="11007"
+                            playlistHref="https://open.spotify.com/embed/playlist/79ZpXPU2kGgeO2ny6KDXSh">Margarita
+                        </option>
                         <!-- "https://open.spotify.com/embed/playlist/
                         7k2IMvfkDK8AIOwKy11QTM"-->
 
-                        <option value="17181">Dirty Martini</option>
+                        <option value="17181" playlistHref="https://open.spotify.com/embed/playlist/
+                        7k2IMvfkDK8AIOwKy11QTM">Dirty Martini</option>
                         <!-- "https://open.spotify.com/embed/playlist/0Ksi6IBhh1ubjyEiAj2M77" -->
 
-                        <option value="12162">Screwdriver</option>
+                        <option value="12162"
+                            playlistHref="https://open.spotify.com/embed/playlist/0Ksi6IBhh1ubjyEiAj2M77">Screwdriver
+                        </option>
                         <!-- "https://open.spotify.com/embed/playlist/7DKOioKSh1NFBmPdOUuzqb" -->
 
-                        <option value="11004">Whiskey Sour</option>
+                        <option value="11004"
+                            playlistHref="https://open.spotify.com/embed/playlist/7DKOioKSh1NFBmPdOUuzqb">Whiskey Sour
+                        </option>
                         <!--"https://open.spotify.com/embed/playlist/65b69Mw2o3O9MH5th7viov" -->
 
-                        <option value="11008">Manhattan</option>
+                        <option value="11008"
+                            playlistHref="https://open.spotify.com/embed/playlist/65b69Mw2o3O9MH5th7viov">Manhattan
+                        </option>
                         <!-- https://open.spotify.com/embed/playlist/1SRAdViQmrPJ0I1mrRPsCo -->
 
-                        <option value="11009">Moscow Mule</option>
+                        <option value="11009"
+                            playlistHref="https://open.spotify.com/embed/playlist/1SRAdViQmrPJ0I1mrRPsCo">Moscow Mule
+                        </option>
                         <!-- "https://open.spotify.com/embed/playlist/7quj0xBIlxt9hkXMjwdCjg" -->
 
-                        <option value="11403">Gin And Tonic</option>
+                        <option value="11403"
+                            playlistHref="https://open.spotify.com/embed/playlist/7quj0xBIlxt9hkXMjwdCjg">Gin And Tonic
+                        </option>
                         <!-- https://open.spotify.com/embed/playlist/14YsjrJt6tjP4bXfHqwoIH -->
 
-                        <option value="11001">Old Fashioned</option>
+                        <option value="11001"
+                            playlistHref="https://open.spotify.com/embed/playlist/14YsjrJt6tjP4bXfHqwoIH">Old Fashioned
+                        </option>
                         <!-- "https://open.spotify.com/embed/playlist/2dXymCFTJorHgGnEif3Ar7" -->
 
-                        <option value="17204">Long Island Iced Tea</option>
+                        <option value="17204"
+                            playlistHref="https://open.spotify.com/embed/playlist/2dXymCFTJorHgGnEif3Ar7">Long Island
+                            Iced Tea</option>
                         <!-- https://open.spotify.com/embed/playlist/4cuX8RVS0LKUnXcwSPtcTL -->
 
-                        <option value="17196">Cosmopolitan</option>
+                        <option value="17196"
+                            playlistHref="https://open.spotify.com/embed/playlist/4cuX8RVS0LKUnXcwSPtcTL">Cosmopolitan
+                        </option>
                     </select>
                 </div>
                 <div class="box" id="playlist">
                     <div class="content" id="display-playlist">
-                        <iframe src="https://open.spotify.com/embed/playlist/75vcd9Ce7OfES4iN5Anw1L" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        <iframe src=
+                        "https://open.spotify.com/embed/playlist/75vcd9Ce7OfES4iN5Anw1L" width="300"
+                            height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                            <!-- <iframe src = "playlistHref">
+
+                            </iframe> -->
                     </div>
 
                 </div>
@@ -138,7 +166,7 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="assets/js/script.js"></script>
-       
+
 
 </body>
 
