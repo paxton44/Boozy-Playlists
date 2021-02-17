@@ -157,7 +157,7 @@ $(document).ready(function () {
           },
 
           "Cosmopolitan": {
-            img: data.results[6].urls.small 
+            img: data.results[7].urls.small 
           },
 
         }
