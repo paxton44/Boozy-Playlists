@@ -2,13 +2,14 @@
 
 # Description
 
-This project gives a user the opportunity to combine a declious cocktail with a fun music playlist! The user will have the option to select a cocktail from a dropdown, which will then give them the directions on how to make the drink, while also loading a playlist for them to listen to. 
+This project gives a user the opportunity to combine a declious cocktail with a fun music playlist! The user will have the option to select a cocktail from a dropdown, which will then give them the ingredients need and the directs on how to make the drink, while also loading a playlist for them to listen to. 
 
 This project features two API's from Thecocktaildb and Unsplash, and features CSS framework from Bulma. 
 
 
 
 ## Table of Contents
+ * [Deployed Page](#Deployed-Page)
  * [Team Members](#Team-Members)
  * [Building Tools](#Building-Tools) 
  * [APIs Used](#APIs-used)
@@ -16,7 +17,7 @@ This project features two API's from Thecocktaildb and Unsplash, and features CS
  * [Demo](#Demo)
 
 
-## Deployed Website
+## Deployed Page
  * https://paxton44.github.io/teamAwesome/
 
 
