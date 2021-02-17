@@ -11,6 +11,7 @@ This project features two API's from Thecocktaildb and Unsplash, and features CS
 ## Table of Contents
  * [Deployed Page](#Deployed-Page)
  * [Team Members](#Team-Members)
+ * [User Story](#User-Story)
  * [Building Tools](#Building-Tools) 
  * [APIs Used](#APIs-used)
  * [Credits](#Credits)
@@ -26,6 +27,12 @@ This project features two API's from Thecocktaildb and Unsplash, and features CS
  * Mitchell Flood (https://github.com/paxton44)
  * Taylor Wright (https://github.com/Tjwri25)
  * Wylie Urig (https://github.com/wylie-u)
+
+
+## User Story
+<pre><code>As a User that is practicing social distancing, but still wants to have fun while staying safely at home 
+I WANT an app that gives me a cocktail recipe when selected and also provides me with a playlist to go with it 
+SO THAT I can still have fun while being responsible, and I can share with my friends remotely</code></pre>
 
 ## Building Tools 
 

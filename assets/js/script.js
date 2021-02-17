@@ -84,8 +84,8 @@ $(document).ready(function () {
     else if (drinkName === "Moscow Mule") {
       iframe.src = "https://open.spotify.com/embed/playlist/1SRAdViQmrPJ0I1mrRPsCo" 
     }
-    else if (drinkName === "Gin and Tonic") {
-      iframe.src = "https://open.spotify.com/embed/playlist/7k2IMvfkDK8AIOwKy11QTM" 
+    else if (drinkName === "Gin And Tonic") {
+      iframe.src = "https://open.spotify.com/embed/playlist/7quj0xBIlxt9hkXMjwdCjg"
     }
     else if (drinkName === "Old Fashioned") {
       iframe.src = "https://open.spotify.com/embed/playlist/14YsjrJt6tjP4bXfHqwoIH" 
