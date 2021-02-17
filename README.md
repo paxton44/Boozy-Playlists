@@ -52,4 +52,4 @@ This project features two API's from Thecocktaildb and Unsplash, and features CS
 
 ## Demo
 
-![Demo](https://user-images.githubusercontent.com/74884495/107984884-2f9c3800-6f86-11eb-9d94-0f4ed2c87efd.gif)
+![Demo](https://user-images.githubusercontent.com/74884495/108259931-eb906b00-711e-11eb-858b-0d3d7ed5b371.gif)
