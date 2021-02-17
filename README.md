@@ -2,41 +2,54 @@
 
 # Description
 
-This project gives a user the opportunity to combine a declious cocktail with a fun music playlist! The user will have the option to select a cocktail from a dropdown, which will then give them the directions on how to make the drink, while also loading a playlist for them to listen to. 
+This project gives a user the opportunity to combine a declious cocktail with a fun music playlist! The user will have the option to select a cocktail from a dropdown, which will then give them the ingredients need and the directs on how to make the drink, while also loading a playlist for them to listen to. 
 
-This project features two API's from Thecocktaildb and Pexels, and features CSS framework from Bulma. 
-
-Mihaela Kokich and Taylor Wright created the HTML and CSS, while Mitchell Flood and Wylie Urig created the Javascript which featured the API's. 
+This project features two API's from Thecocktaildb and Unsplash, and features CSS framework from Bulma. 
 
 
 
 ## Table of Contents
- * [Installation](#Installation) 
- * [Usage](#Usage)
+ * [Deployed Page](#Deployed-Page)
+ * [Team Members](#Team-Members)
+ * [Building Tools](#Building-Tools) 
+ * [APIs Used](#APIs-used)
  * [Credits](#Credits)
- * [License](#License)
-
-## Installation
-
-1. Website Link: https://paxton44.github.io/teamAwesome/
-2. visit https://www.thecocktaildb.com/api.php
-3. visit https://bulma.io/
-4. visit https://www.pexels.com/api/ 
-5. visit https://unsplash.com/documentation
+ * [Demo](#Demo)
 
 
-## Usage
-*  Main Page
+## Deployed Page
+ * https://paxton44.github.io/teamAwesome/
 
-![Demo](https://user-images.githubusercontent.com/74884495/107984884-2f9c3800-6f86-11eb-9d94-0f4ed2c87efd.gif)
+
+## Team Members 
+ * Mihaela Kokich (https://github.com/MKokich)
+ * Mitchell Flood (https://github.com/paxton44)
+ * Taylor Wright (https://github.com/Tjwri25)
+ * Wylie Urig (https://github.com/wylie-u)
+
+## Building Tools 
+
+ * HTML, CSS
+ * Javascript and jQuery
+ * Bulma
+
+ 
+## APIs used 
+
+
+1. TheCocktailDB (https://www.thecocktaildb.com/api.php)
+  * for drink content
+2. Unsplash (https://unsplash.com/developers)
+  * for images 
 
 
 ## Credits
 1. https://bulma.io/
 2. https://www.w3schools.com
 3. https://www.thecocktaildb.com/api.php
-4. https://www.pexels.com/api/ 
-5. https://unsplash.com/documentation
+4. https://unsplash.com/documentation
+5. https://spotify.com
 
-## License
-...
+## Demo
+
+![Demo](https://user-images.githubusercontent.com/74884495/107984884-2f9c3800-6f86-11eb-9d94-0f4ed2c87efd.gif)
