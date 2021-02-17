@@ -25,19 +25,9 @@ $(document).ready(function () {
     $("p").empty();
     $("#drink-image").empty();
     drinkVal = $("#drink-dropdown").val();
-<<<<<<< HEAD
-    if (drinkVal === "Long Island Iced Tea"){
-      var img = document. createElement("img");
-      img.src = "longIslandIcedTea";
-      var src = document. getElementById('drink-image');
-      src.appendChild(img);
-      
-    }
     
-=======
->>>>>>> 8e5dbe5fc59860a1d50a1903926a22ee379077dd
-
     var myLink = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkVal}`;
+    
 
 
     e.preventDefault();
@@ -50,6 +40,12 @@ $(document).ready(function () {
         console.log(data);
         drinkData(data);
       });
+
+
+      
+     
+  
+  
   });
 
   let drinkName;
@@ -62,17 +58,49 @@ $(document).ready(function () {
     drinkName = drink.strDrink;
     console.log(drinkName);
 
-<<<<<<< HEAD
-    fetch("https://api.unsplash.com/search/photos?page=1&per_page=30&query=" + drinkName + "&q=80&w=400&h=300", {
-      headers: {
-        Authorization: "Client-ID V1jjhq2XEVk2M7V0aaCJ1hnJlqQBBoH913NDfbJrCfQ"
-      }
-=======
+    var iframe = document.getElementById("playLink");
+
+    if (drinkName === "Pina Colada")  {
+      iframe.src = "https://open.spotify.com/embed/playlist/0Agoh8cv8FrQnuOXdS1VU8"
+    }
+    else if (drinkName === "Mojito") {
+      iframe.src = "https://open.spotify.com/embed/playlist/2qoSqBU7V04MOgTmF6HJNz"
+    }
+    else if (drinkName === "Margarita") {
+      iframe.src = "https://open.spotify.com/embed/playlist/79ZpXPU2kGgeO2ny6KDXSh"
+    } 
+    else if (drinkName === "Dirty Martini") {
+      iframe.src = "https://open.spotify.com/embed/playlist/7k2IMvfkDK8AIOwKy11QTM" 
+    }
+    else if (drinkName === "Screwdriver") {
+      iframe.src = "https://open.spotify.com/embed/playlist/0Ksi6IBhh1ubjyEiAj2M77" 
+    }
+    else if (drinkName === "Whiskey Sour") {
+      iframe.src = "https://open.spotify.com/embed/playlist/7DKOioKSh1NFBmPdOUuzqb"
+    }
+    else if (drinkName === "Manhattan") {
+      iframe.src = "https://open.spotify.com/embed/playlist/65b69Mw2o3O9MH5th7viov" 
+    }
+    else if (drinkName === "Moscow Mule") {
+      iframe.src = "https://open.spotify.com/embed/playlist/1SRAdViQmrPJ0I1mrRPsCo" 
+    }
+    else if (drinkName === "Gin and Tonic") {
+      iframe.src = "https://open.spotify.com/embed/playlist/7k2IMvfkDK8AIOwKy11QTM" 
+    }
+    else if (drinkName === "Old Fashioned") {
+      iframe.src = "https://open.spotify.com/embed/playlist/14YsjrJt6tjP4bXfHqwoIH" 
+    }
+    else if (drinkName === "Long Island Iced Tea") {
+      iframe.src = "https://open.spotify.com/embed/playlist/2dXymCFTJorHgGnEif3Ar7"
+    }
+    else if (drinkName === "Cosmopolitan") {
+      iframe.src = "https://open.spotify.com/embed/playlist/4cuX8RVS0LKUnXcwSPtcTL" 
+    }
+
     fetch("https://api.unsplash.com/search/photos?page=1&per_page=30&query=" + drinkName, {
         headers: {
           Authorization: "Client-ID V1jjhq2XEVk2M7V0aaCJ1hnJlqQBBoH913NDfbJrCfQ"
         }
->>>>>>> 8e5dbe5fc59860a1d50a1903926a22ee379077dd
       })
       .then(resp => {
 
@@ -95,23 +123,17 @@ $(document).ready(function () {
           },
 
           "Pina Colada": {
-            img: data.results[2].urls.small
+            img: data.results[3].urls.small
           },
 
           "Dirty Martini": {
-            img: data.results[20].urls.small 
+            img: data.results[21].urls.small 
           },
-<<<<<<< HEAD
-          //assets\images\ScrewDriver.jpg
-          "Screwdriver": {
-            img: data.results[0].urls.small 
-=======
 
           "Screwdriver": {
 
             img: data.results[0].urls.small
 
->>>>>>> 8e5dbe5fc59860a1d50a1903926a22ee379077dd
           },
 
           "Whiskey Sour": {
@@ -179,6 +201,9 @@ $(document).ready(function () {
 
     }
 
+
+ 
+
     const drinkInstructions = document.createElement('p');
     drinkInstructions.className = "drink-p"
 
@@ -188,5 +213,9 @@ $(document).ready(function () {
     const getInstructions = drink.strInstructions
 
     drinkInstructions.append(getInstructions);
+
+
+
+
   }
 });
